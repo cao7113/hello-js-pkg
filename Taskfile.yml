@@ -1,0 +1,5 @@
+# https://taskfile.dev/usage/
+version: '3'
+tasks:
+  run: bun run index.ts
+  mk-hello: bun init
