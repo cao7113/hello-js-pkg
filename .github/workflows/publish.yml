@@ -19,12 +19,11 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
       
-      # # try this
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '22'
-      #     # cache: 'bun'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          # cache: 'bun'
 
       - name: Install dependencies with Bun
         run: bun install
