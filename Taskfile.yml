@@ -1,5 +1,35 @@
 # https://taskfile.dev/usage/
 version: '3'
 tasks:
-  run: bun run index.ts
+  default: task t
+  run: bun run src/index.ts
+  i: bun i # bun install
+  b: bun run build
+  t: bun test ./test/**
+  test-demo: |
+    cd demo/from-repo
+    bun i 
+    bun test
+    # cd demo/from-pkg
+    # bun i 
+    # bun test
+
+  # publish
+  # https://bun.sh/docs/cli/publish
+  pub: bun publish # --dry-run --auth-type web --access public
+  login: npm login --auth-type web
+  rel-local: bun run semantic-release --dry-run
+  np: bun x np
+
+  setup: |
+    # ts support for bun api and node api
+    bun add -d @types/bun
+    bun add -d typescript
+    # https://github.com/egoist/tsup
+    bun add -d tsup
+
+    bun add -d semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/npm
+
+    # bun add -d eslint prettier
+
   mk-hello: bun init

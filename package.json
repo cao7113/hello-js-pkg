@@ -1,11 +1,28 @@
 {
-  "name": "hello-js-pkg",
-  "module": "index.ts",
+  "name": "hello-js-pkg-cao",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cao7113/hello-js-pkg-cao#readme",
+  "description": "Hello js package",
+  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "bun run tsup",
+    "test": "bun test ./test/**"
   },
-  "peerDependencies": {
+  "bin": {
+    "hello-js-pkg-cao": "bin/cli.js"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "tsup": "^6.0.0",
     "typescript": "^5.0.0"
-  }
+  },
+  "repository": "github:cao7113/hello-js-pkg-cao",
+  "license": "MIT"
 }

@@ -1,0 +1,6 @@
+# https://taskfile.dev/usage/
+version: '3'
+tasks:
+  default: bun test
+  run: bun run src/index.ts
+  i: bun install
