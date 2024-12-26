@@ -32,9 +32,9 @@ jobs:
       - name: Run Tests
         run: bun test ./test/**
 
-      # - name: Create and publish release
-      #   env:
-      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      #   run: |
-      #     bun run semantic-release
+      - name: Create and publish release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          bun run semantic-release
