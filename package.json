@@ -1,7 +1,7 @@
 {
   "name": "hello-js-pkg-cao",
   "version": "0.0.0+auto-gen-by-semantic-release",
-  "homepage": "https://github.com/cao7113/hello-js-pkg-cao#readme",
+  "homepage": "https://github.com/cao7113/hello-js-pkg-cao",
   "description": "Hello js package",
   "module": "dist/index.mjs",
   "main": "dist/index.cjs",
