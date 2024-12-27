@@ -1,11 +1,19 @@
 # https://taskfile.dev/usage/
 version: '3'
 tasks:
-  default: task t
+  default: |
+    task t
+    task bio-check
+
   run: bun run src/index.ts
   i: bun i # bun install
   b: bun run build
   t: bun test ./test/**
+
+  bio-check: |
+    # bunx biome check --fix .
+    bunx biome check .
+
   test-demo: |
     cd demo/from-repo
     bun update 
@@ -13,7 +21,6 @@ tasks:
     cd demo/from-pkg
     bun update
     bun test
-
   # publish
   # https://bun.sh/docs/cli/publish
   pub: bun publish # --dry-run --auth-type web --access public
@@ -48,6 +55,14 @@ tasks:
     ## test it
     # bunx commitlint --from HEAD~1 --to HEAD --verbose
     # bunx commitlint --last --verbose
+
+    bun add --dev --exact @biomejs/biome
+    bunx @biomejs/biome check --write ./src
+    bunx biome init --jsonc
+    # bunx biome format --write <files>
+    # bunx biome lint --write <files>
+    ## The check command runs multiple tools at once. It formats, lints, and organizes imports.
+    # bunx biome check --write <files>
 
     # bun add -d eslint prettier eslint-config-prettier eslint-plugin-prettier
     # bun rm eslint prettier eslint-config-prettier eslint-plugin-prettier

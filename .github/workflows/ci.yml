@@ -18,6 +18,7 @@ jobs:
       - run: bun install
       - run: bun run build
       - run: bun test ./test/**
+      - run: bun biome check
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
