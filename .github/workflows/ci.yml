@@ -6,15 +6,17 @@ on:
     branches: ["main"]
   workflow_call:
 jobs:
-  my-job:
+  build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: oven-sh/setup-bun@v2
 
       # run any `bun` or `bunx` command
       - run: bun install
-      # - run: bun run src/index.ts
       - run: bun run build
       - run: bun test ./test/**

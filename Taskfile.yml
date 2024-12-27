@@ -8,11 +8,11 @@ tasks:
   t: bun test ./test/**
   test-demo: |
     cd demo/from-repo
-    bun i 
+    bun update 
     bun test
-    # cd demo/from-pkg
-    # bun i 
-    # bun test
+    cd demo/from-pkg
+    bun update
+    bun test
 
   # publish
   # https://bun.sh/docs/cli/publish
@@ -30,6 +30,25 @@ tasks:
 
     bun add -d semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/npm
 
-    # bun add -d eslint prettier
+    bun add -d @commitlint/{cli,config-conventional}
+    echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
+    # echo "for: bar" | bun x commitlint
+
+    bun add -d husky
+    # bunx husky init
+    ## .husky/pre-commit
+    # prettier $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g') --write --ignore-unknown
+    # git update-index --again
+    # skip git hooks
+    # git commit -m "..." -n # Skips Git hooks
+    # HUSKY=0 git ... # Temporarily disables all Git hooks
+
+    ## Add commit message linting to commit-msg hook
+    # echo "bunx --no -- commitlint --edit \$1" > .husky/commit-msg
+    ## test it
+    # bunx commitlint --from HEAD~1 --to HEAD --verbose
+
+    # bun add -d eslint prettier eslint-config-prettier eslint-plugin-prettier
+    # bun rm eslint prettier eslint-config-prettier eslint-plugin-prettier
 
   mk-hello: bun init

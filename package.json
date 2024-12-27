@@ -1,6 +1,6 @@
 {
   "name": "hello-js-pkg-cao",
-  "version": "0.1.0",
+  "version": "0.0.0+auto-gen-by-semantic-release",
   "homepage": "https://github.com/cao7113/hello-js-pkg-cao#readme",
   "description": "Hello js package",
   "module": "dist/index.mjs",
@@ -11,21 +11,29 @@
     "dist",
     "bin"
   ],
+  "keywords": [
+    "hello"
+  ],
   "scripts": {
     "build": "bun run tsup",
-    "test": "bun test ./test/**"
+    "test": "bun test ./test/**",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "bin": {
     "hello-js-pkg-cao": "bin/cli.js"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.1",
     "@types/bun": "^1.1.14",
+    "husky": "^9.1.7",
     "semantic-release": "^24.2.0",
-    "tsup": "^6.0.0",
-    "typescript": "^5.0.0"
+    "tsup": "^6.7.0",
+    "typescript": "^5.7.2"
   },
   "repository": "github:cao7113/hello-js-pkg-cao",
   "license": "MIT"
