@@ -14,6 +14,7 @@ bun x hello-js-cao
 
 ## Links
 
+- https://biomejs.dev/guides/getting-started/#installation
 - https://commitlint.js.org/guides/local-setup
 - https://www.conventionalcommits.org/en/v1.0.0/
 - https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional
