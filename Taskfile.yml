@@ -9,6 +9,7 @@ tasks:
   t: bun test ./test/**
   run: bun run src/index.ts
   i: bun i # bun install
+  view: npm view
 
   bio-check: |
     # bunx biome check --fix .

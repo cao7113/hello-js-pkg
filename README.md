@@ -15,7 +15,7 @@ bunx hello-js-pkg
 ## NOTE
 
 * `package.json` version field automatically managed by https://github.com/semantic-release/semantic-release
-* see final package code at https://www.npmjs.com/package/@cao7113/hello-js-pkg/v/0.2.3?activeTab=code
+* see final package code at https://www.npmjs.com/package/@cao7113/hello-js-pkg/v/0.2.4?activeTab=code
 
 ## Links
 
