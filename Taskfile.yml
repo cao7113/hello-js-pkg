@@ -5,22 +5,26 @@ tasks:
     task t
     task bio-check
 
-  run: bun run src/index.ts
-  i: bun i # bun install
   b: bun run build
   t: bun test ./test/**
+  run: bun run src/index.ts
+  i: bun i # bun install
 
   bio-check: |
     # bunx biome check --fix .
-    bunx biome check .
+    bunx biome check
+  
+  dry-npm: bunx semantic-release --dry-run
 
   test-demo: |
     cd demo/from-repo
     bun update 
     bun test
+    
     cd demo/from-pkg
     bun update
     bun test
+    
   # publish
   # https://bun.sh/docs/cli/publish
   pub: bun publish # --dry-run --auth-type web --access public

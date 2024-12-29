@@ -1,10 +1,14 @@
 {
-  "name": "hello-js-pkg-cao",
+  "name": "@cao7113/hello-js-pkg",
   "version": "0.0.0+auto-gen-by-semantic-release",
   "homepage": "https://github.com/cao7113/hello-js-pkg-cao",
   "description": "Hello js package",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "main": "dist/index.cjs",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "types": "dist/index.d.ts",
   "type": "module",
   "files": ["dist", "bin"],
@@ -32,5 +36,10 @@
     "typescript": "^5.7.2"
   },
   "repository": "github:cao7113/hello-js-pkg-cao",
+  "author": {
+    "name": "cao7113",
+    "email": "cao7113@hotmail.com",
+    "url": "https://github.com/cao7113"
+  },
   "license": "MIT"
 }

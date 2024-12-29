@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/cao7113/hello-js-pkg-cao/actions/workflows/ci.yml/badge.svg)](https://github.com/cao7113/hello-js-pkg-cao/actions/workflows/ci.yml)
 [![Release](https://github.com/cao7113/hello-js-pkg-cao/actions/workflows/publish.yml/badge.svg)](https://github.com/cao7113/hello-js-pkg-cao/actions/workflows/publish.yml)
-[![NPM Package](https://img.shields.io/npm/v/hello-js-pkg-cao?color=brightgreen&label=npm%20package)](https://www.npmjs.org/package/hello-js-pkg-cao)
+[![NPM Package](https://img.shields.io/npm/v/hello-js-pkg-cao?color=brightgreen&label=npm%20package)](https://www.npmjs.com/package/hello-js-pkg-cao)
 
 
 To install dependencies:
