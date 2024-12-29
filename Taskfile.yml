@@ -17,12 +17,8 @@ tasks:
   dry-npm: bunx semantic-release --dry-run
 
   test-demo: |
-    cd demo/from-repo
+    cd demo
     bun update 
-    bun test
-    
-    cd demo/from-pkg
-    bun update
     bun test
     
   # publish

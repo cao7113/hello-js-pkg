@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { sayHello } from "hello-js-pkg-cao";
+import { sayHello } from "@cao7113/hello-js-pkg";
 
 describe("sayHello", () => {
   it("should return a greeting message", () => {

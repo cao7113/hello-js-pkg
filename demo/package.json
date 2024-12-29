@@ -1,5 +1,5 @@
 {
-  "name": "demo-from-repo",
+  "name": "hello-js-demo",
   "module": "src/index.ts",
   "type": "module",
   "devDependencies": {
@@ -9,6 +9,9 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "hello-js-pkg-cao": "file:../.."
+    "@cao7113/hello-js-pkg": "^0.2.3"
+  },
+  "scripts": {
+    "test": "bun test"
   }
 }

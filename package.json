@@ -1,7 +1,7 @@
 {
   "name": "@cao7113/hello-js-pkg",
   "version": "0.0.0+auto-gen-by-semantic-release",
-  "homepage": "https://github.com/cao7113/hello-js-pkg-cao",
+  "homepage": "https://github.com/cao7113/hello-js-pkg",
   "description": "Hello js package",
   "module": "dist/index.js",
   "main": "dist/index.cjs",
@@ -19,9 +19,7 @@
     "prepare": "husky",
     "commitlint": "commitlint --edit"
   },
-  "bin": {
-    "hello-js-pkg-cao": "bin/cli.js"
-  },
+  "bin": "bin/cli.js",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "^19.6.1",
@@ -35,7 +33,7 @@
     "tsup": "^6.7.0",
     "typescript": "^5.7.2"
   },
-  "repository": "github:cao7113/hello-js-pkg-cao",
+  "repository": "github:cao7113/hello-js-pkg",
   "author": {
     "name": "cao7113",
     "email": "cao7113@hotmail.com",
