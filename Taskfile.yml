@@ -47,7 +47,7 @@ tasks:
     ## .husky/pre-commit
     # prettier $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g') --write --ignore-unknown
     # git update-index --again
-    # skip git hooks
+    ## skip git hooks
     # git commit -m "..." -n # Skips Git hooks
     # HUSKY=0 git ... # Temporarily disables all Git hooks
 
